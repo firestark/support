@@ -1,0 +1,49 @@
+{
+    "name": "firestark/support",
+    "version": "0.0.1",
+    "description": "Supporting tools.",
+    "type": "library",
+    "keywords": [
+        "eyedouble",
+        "firestark",
+        "lionar",
+        "support"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aron Wouters",
+            "email": "lionar@mail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Irsan van Wel",
+            "email": "vanwel@eyedouble.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+        	"": [ "source/accessibility", "source/exceptions" ],
+        	"is\\": "source/is"
+        },
+        "files": [
+           "source/helpers/text.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
+}
