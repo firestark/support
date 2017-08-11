@@ -34,7 +34,7 @@
         	"is\\": "source/is"
         },
         "files": [
-            "source/helpers/checks.php"
+            "source/helpers/checks.php",
             "source/helpers/text.php"
         ]
     },
