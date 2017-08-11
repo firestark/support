@@ -23,10 +23,10 @@
         }
     ],
     "require": {
-        
+
     },
     "require-dev": {
-        
+
     },
     "autoload": {
         "psr-4": {
@@ -34,12 +34,13 @@
         	"is\\": "source/is"
         },
         "files": [
-           "source/helpers/text.php"
+            "source/helpers/checks.php"
+            "source/helpers/text.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            
+
         }
     },
     "config": {
