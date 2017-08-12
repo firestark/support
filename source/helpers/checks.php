@@ -2,8 +2,11 @@
 
 if ( ! function_exists ( 'is_html' ) )
 {
-    function is_html ( string $string ) : bool
+    function is_html ( $string ) : bool
     {
-    	   return $string !== strip_tags ( $string ) ? true : false;
+        if ( ! is_string ( $string ) )
+            return false;
+            
+        return $string !== strip_tags ( $string ) ? true : false;
     }
 }
