@@ -6,7 +6,9 @@ define ( 'types',
 	'integer' 	=> 'int', 
 	'double' 	=> 'float', 
 	'boolean' 	=> 'bool', 
-	'array' 	=> 'array' 
+	'array' 	=> 'array',
+	'null'		=> 'null',
+	'NULL'		=> 'null'
 ] );
 
 if ( ! function_exists ( 'is_html' ) )
