@@ -22,11 +22,30 @@ if ( ! function_exists ( 'is_html' ) )
     }
 }
 
-if ( ! function_exists ( 'get_type' ) )
-{
-    function get_type ( $variable ) : string
-    {
-        $type = gettype ( $variable );
+function get_type ( $variable )
+{   
+	if ( is_string ( $variable ) )
+		$variable = getcorrectvariable ( $variable );
+    $type = gettype ( $variable );
     	return types [ $type ];
+}
+
+function getcorrectvariable ( $string )
+{
+
+    $string = trim ( $string );
+   
+    if ( empty ( $string ) ) return '';
+    
+    if ( ! preg_match ( "/[^0-9.]+/",$string ) )
+    {
+        if ( preg_match ( "/[.]+/",$string ) )
+            return ( float ) $string;
+        else
+            return ( int ) $string;
     }
+
+    if ( $string === 'true' ) return true;
+    if ( $string === 'false' ) return false;
+    return ( string ) $string;
 }
