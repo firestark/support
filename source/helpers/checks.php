@@ -37,9 +37,9 @@ function getcorrectvariable ( $string )
    
     if ( empty ( $string ) ) return '';
     
-    if ( ! preg_match ( "/[^0-9.]+/",$string ) )
+    if ( ! preg_match ( "/[^0-9.]+/", $string ) )
     {
-        if ( preg_match ( "/[.]+/",$string ) )
+        if ( preg_match ( "/[.]+/", $string ) )
             return ( float ) $string;
         else
             return ( int ) $string;
