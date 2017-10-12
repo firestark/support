@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-        	"": [ "source/accessibility", "source/exceptions" ],
+        	"": [ "source/accessibility", "source/exceptions & errors" ],
         	"is\\": "source/is"
         },
         "files": [
