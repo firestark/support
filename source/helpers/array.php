@@ -13,9 +13,9 @@ function array_get ( array $subject, $key, $default = null )
 	$current = $subject;
 	$token = strtok ( $key, '.' );
 
-	while ( $token !== false ) 
+	while ( $token !== false )
 	{
-		if ( ! isset ( $current [ $token ] ) ) 
+		if ( ! isset ( $current [ $token ] ) )
 			return $default;
 	    $current = $current [ $token ];
     	$token = strtok ( '.' );
@@ -26,7 +26,7 @@ function array_get ( array $subject, $key, $default = null )
 
 /**
  * Implode with the addition of an alternative last glue
- * 
+ *
  * @param  string $glue     A string to put in between the array pieces
  * @param  array  $pieces   The pieces to make the string from
  * @param  string $lastGlue A string to put in between the first to last and last pieces
@@ -34,8 +34,8 @@ function array_get ( array $subject, $key, $default = null )
  */
 function imploding ( string $glue, array $pieces, string $lastGlue = 'and' ) : string
 {
-	$last  = array_slice ( $array, -1 );
-	$first = join (', ', array_slice ( $array, 0, -1 ) );
+	$last  = array_slice ( $pieces, -1 );
+	$first = join (', ', array_slice ( $pieces, 0, -1 ) );
 	$both  = array_filter ( array_merge ( array ( $first ), $last ), 'strlen' );
 	return join ( ' ' . $lastGlue . ' ', $both );
 }
