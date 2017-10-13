@@ -1,6 +1,6 @@
 <?php
 
-trait readable_entries
+trait readableEntries
 {
 	public function jsonSerialize ( )
     {
