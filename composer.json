@@ -36,6 +36,7 @@
         "files": [
         	"source/helpers/array.php",
             "source/helpers/checks.php",
+            "source/helpers/misc.php",
             "source/helpers/text.php"
         ]
     },
