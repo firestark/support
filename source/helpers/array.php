@@ -1,27 +1,32 @@
 <?php
 
-/**
- * Get an item from an array using "dot" notation.
- *
- * @param  array   $subject
- * @param  string  $key
- * @param  mixed   $default
- * @return mixed
- */
-function array_get ( array $subject, $key, $default = null )
+if ( ! function_exists ( 'array_get' ) )
 {
-	$current = $subject;
-	$token = strtok ( $key, '.' );
 
-	while ( $token !== false )
+	/**
+	 * Get an item from an array using "dot" notation.
+	 *
+	 * @param  array   $subject
+	 * @param  string  $key
+	 * @param  mixed   $default
+	 * @return mixed
+	 */
+	function array_get ( array $subject, $key, $default = null )
 	{
-		if ( ! isset ( $current [ $token ] ) )
-			return $default;
-	    $current = $current [ $token ];
-    	$token = strtok ( '.' );
+		$current = $subject;
+		$token = strtok ( $key, '.' );
+
+		while ( $token !== false )
+		{
+			if ( ! isset ( $current [ $token ] ) )
+				return $default;
+		    $current = $current [ $token ];
+	    	$token = strtok ( '.' );
+		}
+
+		return $current;
 	}
 
-	return $current;
 }
 
 /**
