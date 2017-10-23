@@ -38,6 +38,9 @@
             "source/helpers/checks.php",
             "source/helpers/misc.php",
             "source/helpers/text.php"
+        ],
+        "classmap": [
+        	"source/facade.php"
         ]
     },
     "autoload-dev": {
