@@ -1,7 +1,5 @@
 <?php
 
-namespace utility;
-
 
 abstract class facade
 {
