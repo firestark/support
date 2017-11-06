@@ -4,6 +4,11 @@ trait readable
 {
 	public function jsonSerialize ( )
     {
-        return get_object_vars ( $this );
+    	return $this->mayRead ( );
+    }
+
+    public function mayRead ( )
+    {
+    	return get_object_vars ( $this );
     }
 }
